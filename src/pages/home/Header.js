@@ -6,6 +6,7 @@ import ArrowCateg from "../../img/arrow.png"
 import Lupa from "../../img/lupa.png"
 import UserImg from "../../img/img-user.png"
 import Arrow from "../../img/arrow.png"
+import InputComp from "./Input.js"
 
 
 const Header = styled.div`
@@ -25,14 +26,13 @@ const Item = styled.li`
   margin-left: 15px;
   color: white;
   font-size: 2vh;
-  transition: 0.3s;
   &:hover{
     cursor: pointer;
     border-bottom: 2px white solid;
   }
 `
 const Button = styled.button`
-  margin-left: 23vw;
+  margin-left: 40vw;
   width: 160px;
   height: 35px;
   background-color: #E71B27;
@@ -42,9 +42,11 @@ const Button = styled.button`
   transition: 0.7s;
   &:hover{
     background-color: #B2060F;
+    cursor: pointer;
   }
 `
 const Input = styled.input`
+  color: white;
   padding-left: 40px;
   height: 35px;
   width: 300px;
@@ -67,7 +69,7 @@ const ImgArrow = styled.img`
   }
 `
 const DropDown = styled.ul`
-  margin: 25px 0 0 72px;
+  margin: 30px 0 0 72px;
   list-style: none;
   background-color: black;
   width: 120px;
@@ -80,6 +82,17 @@ const DropDown = styled.ul`
   justify-content: space-evenly;
   align-items: center;
   color: white;
+`
+const ItemDropDown = styled.li`
+  transition: 0.3s;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  &:hover{
+    cursor: pointer;
+    border-bottom: 2px white solid;
+    background-color: grey;
+  }
 `
 
 
@@ -109,10 +122,10 @@ state={
             <ImgArrow onClick={this.openList} src={Arrow}/>
             {this.state.listCategoria && (
               <DropDown>
-                <li>Todos</li>
-                <li>Favoritos</li>
-                <li>Já vistos</li>
-                <li>Adicionados</li>
+                <ItemDropDown>Todos</ItemDropDown>
+                <ItemDropDown>Favoritos</ItemDropDown>
+                <ItemDropDown>Já vistos</ItemDropDown>
+                <ItemDropDown>Adicionados</ItemDropDown>
               </DropDown>
             )}
           </List>

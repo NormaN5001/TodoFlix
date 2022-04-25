@@ -1,5 +1,6 @@
 import React from "react"
 import styled from 'styled-components';
+import Carrossel from "./Carousel"
 
 import Destaque from "../../img/destaque.png"
 import Favorito from "../../img/favorito.png"
@@ -84,6 +85,7 @@ export default class App extends React.Component{
             </Assessment>
           </About>
         </Spotlight>
+        <Carrossel/>
       </Main>
     )
   }

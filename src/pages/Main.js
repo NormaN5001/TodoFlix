@@ -2,9 +2,9 @@ import React from "react"
 import styled from 'styled-components';
 import Carrossel from "./Carousel"
 
-import Destaque from "../../img/destaque.png"
-import Favorito from "../../img/favorito.png"
-import Like from "../../img/like.png"
+import Destaque from "../img/destaque.png"
+import Favorito from "../img/favorito.png"
+import Like from "../img/like.png"
 
 
 const Main = styled.section`

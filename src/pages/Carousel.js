@@ -2,17 +2,17 @@ import React from "react"
 import styled from 'styled-components';
 import Carousel from "nuka-carousel"
 
-import Favorito from "../../img/favorito.png"
-import Like from "../../img/like.png"
-import Shrek from "../../img/movie1.png"
-import VoltarSozinho from "../../img/movie2.png"
-import SpiderMan from "../../img/movie3.png"
-import SonhoLiberdade from "../../img/movie4.png"
-import QueHorasVolta from "../../img/movie5.png"
-import AmarElo from "../../img/movie6.png"
-import Rocketman from "../../img/movie7.png"
-import FugaGalinhas from "../../img/movie8.png"
-import Destaque from "../../img/destaque.png"
+import Favorito from "../img/favorito.png"
+import Like from "../img/like.png"
+import Shrek from "../img/movie1.png"
+import VoltarSozinho from "../img/movie2.png"
+import SpiderMan from "../img/movie3.png"
+import SonhoLiberdade from "../img/movie4.png"
+import QueHorasVolta from "../img/movie5.png"
+import AmarElo from "../img/movie6.png"
+import Rocketman from "../img/movie7.png"
+import FugaGalinhas from "../img/movie8.png"
+import Destaque from "../img/destaque.png"
 
 
 const Box = styled.div`

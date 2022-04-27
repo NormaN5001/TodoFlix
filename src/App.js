@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import { createGlobalStyle } from "styled-components"
 import axios from "axios"
 
-import Header from "./pages/home/Header.js"
-import Main from "./pages/home/Main.js"
+import Header from "./pages/Header.js"
+import Main from "./pages/Main.js"
 
 const GlobalStyle = createGlobalStyle`
    *{

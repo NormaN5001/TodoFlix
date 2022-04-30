@@ -2,6 +2,7 @@ import React from "react"
 import styled from 'styled-components';
 import {BrowserRouter  as Router, Link, Routes, Route} from "react-router-dom"
 import Todos from "./All.js"
+import Main from "./Main.js"
 
 import Logo from "../img/logo.png"
 import ArrowCateg from "../img/arrow.png"
@@ -260,26 +261,28 @@ export default class App extends React.Component{
   render(){
     return(
       <Header>
+      <Router>
         <img src={Logo} alt="Logo do site"/>
           <List>
-            <Item>Início</Item>
+            <Item><Link to="/">Inicio</Link></Item>
             <Item onClick={this.openList}>Categorias</Item>
             <ImgArrow onClick={this.openList} src={Arrow}/>
             {this.state.listCategoria && (
-            <Router>
+            
               <DropDown>
                 <ItemDropDown><Link to="All">Todos</Link></ItemDropDown>
                 <ItemDropDown>Favoritos</ItemDropDown>
                 <ItemDropDown>Já vistos</ItemDropDown>
                 <ItemDropDown>Adicionados</ItemDropDown>
               </DropDown>
-
-              <Routes>
-              <Route path="All" element={<Todos/>}/>
-              </Routes>
-            </Router>
             )}
           </List>
+
+          <Routes>
+              <Route path="/"/>
+              <Route path="All" element={<Todos/>}/>
+              </Routes>
+          </Router>
         <Button>Adicionar filme</Button>
         <Input onChange={this.handleChange} type="text" placeholder="Pesquisar"/>
 

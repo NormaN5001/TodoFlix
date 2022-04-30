@@ -151,7 +151,7 @@ state = {
   render(){
     return(
       <Box>
-        <Carousel slidesToShow="4">
+        <Carousel slidesToShow="4" autoplay="true" autoplayInterval="1500" wrapAround="true">
           {this.state.catalogo.map((item) => (
            <InfoMovie>
             <Fav src={Favorito} alt="Imagem de um coração"/>

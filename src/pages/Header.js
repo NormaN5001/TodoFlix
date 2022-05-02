@@ -40,6 +40,7 @@ const List = styled.ul`
 const Item = styled.li`
   margin-left: 15px;
   color: white;
+  font-weight: 500;
   font-size: 2vh;
   &:hover{
     cursor: pointer;
@@ -109,6 +110,7 @@ const ItemDropDown = styled.li`
     border-bottom: 2px white solid;
     background-color: grey;
   }
+  
 `
 const BoxSearch = styled.div`
   display: flex;
@@ -181,6 +183,11 @@ const TitleAvaliation = styled.div`
     align-items: center;
   }
 
+`
+const LinkItem = styled(Link)`
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
 `
 
 
@@ -264,13 +271,13 @@ export default class App extends React.Component{
       <Router>
         <img src={Logo} alt="Logo do site"/>
           <List>
-            <Item><Link to="/">Inicio</Link></Item>
+            <Item><LinkItem to="/">Inicio</LinkItem></Item>
             <Item onClick={this.openList}>Categorias</Item>
             <ImgArrow onClick={this.openList} src={Arrow}/>
             {this.state.listCategoria && (
             
               <DropDown>
-                <ItemDropDown><Link to="All">Todos</Link></ItemDropDown>
+                <ItemDropDown><LinkItem to="All">Todos</LinkItem></ItemDropDown>
                 <ItemDropDown>Favoritos</ItemDropDown>
                 <ItemDropDown>Já vistos</ItemDropDown>
                 <ItemDropDown>Adicionados</ItemDropDown>

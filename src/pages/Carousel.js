@@ -13,7 +13,8 @@ import AmarElo from "../img/movie6.png"
 import Rocketman from "../img/movie7.png"
 import FugaGalinhas from "../img/movie8.png"
 import Destaque from "../img/destaque.png"
-
+import Next from "../img/arrowNext.png"
+import Prev from "../img/arrowPrev.png"
 
 const Box = styled.div`
   position: absolute;
@@ -82,6 +83,9 @@ const TitleAvaliation = styled.div`
   }
 
 `
+const NextImg = styled.img`
+  right: 10px;
+`
 
 
 export default class App extends React.Component{
@@ -147,11 +151,15 @@ state = {
 
 
 
-
   render(){
     return(
       <Box>
-        <Carousel slidesToShow="4" autoplay="true" autoplayInterval="1500" wrapAround="true">
+        <Carousel
+        slidesToShow="4"
+        autoplay="true"
+        autoplayInterval="1500"
+        wrapAround="true"
+        >
           {this.state.catalogo.map((item) => (
            <InfoMovie>
             <Fav src={Favorito} alt="Imagem de um coração"/>
